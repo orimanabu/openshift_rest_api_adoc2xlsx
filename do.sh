@@ -15,5 +15,5 @@ grep xref: ${repodir}/rest_api/index.adoc | sed -e 's/^.*xref:\.\///' -e 's/#.*\
 	output_file=${title}__$(echo ${file} | sed -e 's|/|__|g')
 	echo "=> ${outputdir}/${output_file}"
 	# echo "=> ${title}"
-	./a.py ${repodir}/rest_api/${file} -f xlsx -o ${outputdir}/${output_file}.xlsx
+	./adoc2xlsx.py ${repodir}/rest_api/${file} -f xlsx -o ${outputdir}/${output_file}.xlsx
 done
